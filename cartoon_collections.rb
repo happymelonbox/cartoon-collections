@@ -12,11 +12,17 @@ def summon_captain_planet(arr)
   newArray
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+def long_planeteer_calls(arr)
+  arr.any?{|i| i.length > 4}
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+def find_the_cheese(arr)
   cheese_types = ["cheddar", "gouda", "camembert"]
+  newArray = []
+  cheese_types.each do |cheese|
+    if arr.include?(cheese)
+      newArray << cheese
+    end
+  end
+  return newArray.first
 end
